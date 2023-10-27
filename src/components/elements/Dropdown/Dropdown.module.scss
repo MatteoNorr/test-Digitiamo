@@ -1,0 +1,19 @@
+.Dropdown {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 9;
+
+  select {
+    width: 50px;
+    height: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: $dropdownColor;
+    @extend .button;
+
+    &:active {
+      background: $secondary-color;
+    }
+  }
+}

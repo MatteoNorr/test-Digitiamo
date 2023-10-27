@@ -1,0 +1,13 @@
+@mixin flexBox($dirention, $justify, $align, $gap) {
+  display: flex;
+  flex-direction: $dirention;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin screenSize($min-widht, $max-width) {
+  @media (min-width: $min-widht) and (max-width: $max-width) {
+    @content;
+  }
+}
