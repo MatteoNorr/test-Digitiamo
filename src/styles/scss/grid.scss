@@ -1,0 +1,3 @@
+@mixin grid($columns, $column, $width: 1) {
+  width: calc($columns / $column * $width);
+}

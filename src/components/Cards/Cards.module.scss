@@ -1,0 +1,75 @@
+.Cards {
+  @include flexBox(row, center, flex-start, 10px);
+  margin: 2% 5%;
+
+  .card {
+    @include grid(100%, 5);
+    border: solid $background-color-light 1px;
+    box-shadow: 1px 1px 2px rgba(176, 176, 176, 0.441);
+    border-radius: 10px;
+    height: 300px;
+
+    h2 {
+      padding-left: 3%;
+    }
+
+    .el {
+      height: 50px;
+      background-color: $background-color-dark;
+      margin: 2px 0;
+      padding: 2%;
+
+      p,
+      h3 {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &:first-child {
+      background-color: $background-color-light;
+    }
+  }
+
+  // mobile
+  @include screenSize(0, 767px) {
+    @include flexBox(row, flex-start, flex-start, 10px);
+    scroll-snap-type: x mandatory;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .card {
+      min-width: 90%;
+      scroll-snap-align: center;
+    }
+  }
+}
+.share {
+  @include flexBox(column, center, center, 0);
+  margin: 5%;
+
+  h2 {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  p {
+    background-color: $background-color-dark;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+  }
+
+  @include screenSize(0, 767px) {
+    display: none;
+  }
+}
