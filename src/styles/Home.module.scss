@@ -1,0 +1,24 @@
+.status {
+  &_txt {
+    text-align: center;
+    margin: 2%;
+  }
+
+  h2 {
+    font-size: 2.1em;
+  }
+
+  h2,
+  p {
+    margin: 0;
+  }
+
+  //mobile
+  @include screenSize(0, 767px) {
+    @include flexBox(column-reverse, none, none, 0);
+
+    &_txt {
+      margin: 5% 0;
+    }
+  }
+}

@@ -1,8 +1,11 @@
 import Head from "next/head";
-import styles from "@/styles/Home.module.css";
+import styles from "@/styles/Home.module.scss";
+import { GetServerSideProps } from "next";
 import Input from "@/components/Input";
+import Cards from "@/components/Cards";
 
-export default function Home() {
+const BASE_URL = "https://api.npoint.io/3c65c66e537e1badac54";
+export default function Home({ data }) {
   return (
     <>
       <Head>
@@ -12,10 +15,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div>
-          <Input />
+        <div className={styles.status}>
+          <div className={styles.status_txt}>
+            <h2>200</h2>
+            <p>Everything is fine</p>
+          </div>
+          <Input url={BASE_URL} />
         </div>
+        <Cards data={data} />
       </main>
     </>
   );
 }
+
+export const getServerSideProps = async () => {
+  const response = await fetch(BASE_URL);
+  const data = await response.json();
+  return { props: { data } };
+};
