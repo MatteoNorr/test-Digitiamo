@@ -1,0 +1,25 @@
+.pageLoad,
+.interaction {
+  @include flexBox(column, center, center, 0);
+  width: 100%;
+  position: relative;
+  margin-bottom: 5%;
+
+  span {
+    position: absolute;
+    top: 45%;
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: px2rem(25);
+    color: $speed-txt-title;
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+    font-size: px2rem(18);
+    color: $speed-txt-content;
+  }
+}

@@ -6,7 +6,7 @@ const nextConfig = {
         @import "./src/styles/scss/variables.scss";
         @import "./src/styles/scss/mixins.scss";
         @import "./src/styles/scss/extends.scss";
-        @import "./src/styles/scss/grid.scss";
+        @import "./src/styles/scss/function.scss";
         `,
   },
 };
