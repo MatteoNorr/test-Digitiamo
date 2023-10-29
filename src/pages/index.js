@@ -3,8 +3,9 @@ import styles from "@/styles/Home.module.scss";
 import { GetServerSideProps } from "next";
 import Input from "@/components/Input";
 import Cards from "@/components/Cards";
+import MobileTab from "@/components/MobileTab";
 
-const BASE_URL = "https://api.npoint.io/3c65c66e537e1badac54";
+const BASE_URL = "https://api.npoint.io/579627c7c76816eaf4e3";
 export default function Home({ data }) {
   return (
     <>
@@ -23,6 +24,7 @@ export default function Home({ data }) {
           <Input url={BASE_URL} />
         </div>
         <Cards data={data} />
+        <MobileTab data={data} />
       </main>
     </>
   );
