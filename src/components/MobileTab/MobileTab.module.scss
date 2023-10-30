@@ -1,6 +1,6 @@
 .MobileTab {
   position: absolute;
-  top: 93%;
+  top: 95%;
   bottom: 0;
   left: 0;
   @include flexBox(column, flex-start, center, 0);
@@ -14,7 +14,6 @@
 
   .content {
     overflow: hidden;
-    transition: all ease-in-out 1.5s;
 
     .handler {
       background-color: $background-color-dark;

@@ -36,7 +36,7 @@
     @include flexBox(row, flex-start, flex-start, 10px);
     scroll-snap-type: x mandatory;
     overflow: auto;
-    margin-right: 0;
+    padding: $xs-padding;
 
     &::-webkit-scrollbar {
       display: none;
@@ -44,6 +44,7 @@
 
     .card {
       min-width: 90%;
+      min-height: 60dvh;
       scroll-snap-align: center;
     }
   }
@@ -72,5 +73,35 @@
 
   @include screenSize(0, 767px) {
     display: none;
+  }
+}
+
+.noUrl {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+  padding: $ml-padding;
+  text-align: center;
+
+  svg {
+    width: auto;
+    min-height: px2rem(30);
+    animation: 2s arrow infinite;
+  }
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateY(px2rem(8));
+  }
+
+  50% {
+    transform: translateY(px2rem(0));
+  }
+
+  100% {
+    transform: translateY(px2rem(8));
   }
 }
