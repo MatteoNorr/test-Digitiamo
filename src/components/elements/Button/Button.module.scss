@@ -10,7 +10,10 @@
     background-color: $send-color;
     color: $p-color;
     @extend .button;
-    cursor: pointer;
+
+    & > * {
+      cursor: pointer;
+    }
 
     //mobile
     @include screenSize(993px, 3000px) {
