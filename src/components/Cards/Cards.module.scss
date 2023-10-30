@@ -36,6 +36,7 @@
     @include flexBox(row, flex-start, flex-start, 10px);
     scroll-snap-type: x mandatory;
     overflow: auto;
+    margin-right: 0;
 
     &::-webkit-scrollbar {
       display: none;

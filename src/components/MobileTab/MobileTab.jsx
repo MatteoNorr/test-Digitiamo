@@ -7,7 +7,7 @@ const MobileTab = ({ data }) => {
   const [position, setPosition] = useState(0);
   const [progress, setProgress] = useState(0);
 
-  //Swipe tab
+  //Swipable tab
   const swiper = (e) => {
     document.body.style.overflow = "hidden";
     setPosition(e.touches[0].clientY);
@@ -22,7 +22,7 @@ const MobileTab = ({ data }) => {
       handlerRef.current.style.top = position + "px";
     }
   };
-  // end Swiper Tab
+  // end Swipable Tab
 
   return (
     <>

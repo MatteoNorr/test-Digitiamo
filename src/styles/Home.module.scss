@@ -16,6 +16,7 @@
   //mobile
   @include screenSize(0, 767px) {
     @include flexBox(column-reverse, none, none, 0);
+    margin-top: 4%;
 
     &_txt {
       margin: 5% 0;

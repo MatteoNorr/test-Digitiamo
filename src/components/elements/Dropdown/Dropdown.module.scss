@@ -1,19 +1,26 @@
 .Dropdown {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: px2rem(10);
+  left: px2rem(10);
   z-index: 9;
 
   select {
-    width: 60px;
-    height: 30px;
+    width: px2rem(60);
+    height: px2rem(30);
     appearance: none;
     -webkit-appearance: none;
     background-color: $dropdownColor;
+    font-size: px2rem(12);
+    font-weight: 500;
     @extend .button;
 
     &:active {
-      background: $secondary-color;
+      background: $send-color;
+    }
+
+    //mobile
+    @include screenSize(0, 992px) {
+      width: px2rem(30);
     }
   }
 }
